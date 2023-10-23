@@ -1,0 +1,39 @@
+Here is a step-by-step procedure to construct the dataset mentioned in the paragraph:
+
+Download the human gene-disease associations data (Ver: Feb. 13, 2018) from the CTD (Comparative Toxicogenomics Database) following the steps mentioned in the previous answer.
+Extract only the curated gene-disease relationships with direct evidence. Remove any associated pairs without direct evidence and only retrieve the pairs with annotation “Direct Evidence (marker/mechanism/therapeutic)”. This will give you a filtered list of gene-disease associations with accurate associations between disease and gene.
+Obtain the human protein sequence information from the UniProt Knowledgebase database (Ver: Feb. 28, 2018).
+Remove any disease-gene association pairs in which the gene products (i.e., proteins) do not have well-defined sequence information or the diseases do not have symptomatic information.
+Collect the remaining gene-disease relationships to form positive samples. This will give you a list of 19,730 gene-disease relationships with 1,797 diseases and 5,292 genes.
+Randomly extract 19,370 unknown disease-gene associations from the list of currently unknown disease-gene associations. These unknown associations will form the negative samples.
+Combine the positive and negative samples to form the benchmark dataset, which will include both positive and negative disease-gene associations.
+Note that the specific details of how to perform the above steps may vary depending on the tools and resources used, and additional steps or quality control checks may be necessary to ensure the accuracy and completeness of the final dataset.
+
+
+
+
+
+
+
+
+
+
+
+
+
+"We download human gene-disease associations data (Ver: Feb. 13, 2018) from the
+CTD (Comparative Toxicogenomics Database). The curated gene-disease relationships
+are extracted from published literature by CTD curators or obtained from the OMIM
+(Online Mendelian Inheritance in Man) database. The inferred relationship is
+established by CTD-planned chemistry-gene interactions. We eliminate the associated
+pairs without direct evidence and only retrieve the pairs with annotation “Direct
+Evidence (marker/mechanism/therapeutic)”, which symbolizes the accurate association
+between disease and gene. In addition, we also obtained the human protein sequence information from the UniProt Knowledgebase database (Ver: Feb. 28, 2018). And,
+further delete the disease-gene association pairs in which gene products i.e. proteins
+without well-defined sequence information or diseases without symptomatic
+information. Finally, we collected 19730 gene-disease relationships including 1797
+diseases and 5292 genes (Supporting information 1) as positive samples. Between these
+genes and diseases, there are also 9490354 currently unknown disease-gene
+associations, from which we randomly extract 19370 unknown associations as negative
+samples and together it with positive samples to form the benchmark dataset." 
+give me the step by step procedure to construct the dataset that was constructed by the steps mentioned in the above paragraph
